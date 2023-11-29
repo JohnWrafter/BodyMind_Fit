@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$v1#d@1*#+m#khi3n(nppt1@x=i7fa)id1*6fl4!(wpm-onxw7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-johnwrafter-bodymindfit-mkrtc9z4us5.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['*','8000-johnwrafter-bodymindfit-mkrtc9z4us5.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bodymindfit',
     'home',
     
 ]
@@ -56,7 +57,11 @@ ROOT_URLCONF = 'bodymindfit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        "DIRS": [BASE_DIR / "../templates","templates"],
+        # 'DIRS': [
+        #     os.path.join(BASE_DIR, 'BodyMind_Fit','templates'),
+        #     os.path.join(BASE_DIR, 'templates', 'allauth'),
+        # ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
